@@ -1,19 +1,28 @@
-# Nanobot's Enigma: The Techno Dungeon
+# MYTHICAL DUNGEON
 
 ![Unity](https://img.shields.io/badge/Unity-6000.0.28f1-black?style=flat&logo=unity)
 ![Language](https://img.shields.io/badge/Language-C%23-blue)
 ![Art](https://img.shields.io/badge/Assets-Blender-orange)
+
+## Download and play
+
+| Platform | Download |
+| --- | --- |
+| Windows PC | [Download MYTHICAL DUNGEON on itch.io](https://ishantcypher.itch.io/mythical-dungeon) |
+| Android | [Download the latest Android APK](https://github.com/Ishant6565/MYTHICAL-DUNGEONS/releases/latest/download/Mythical-Dungeon-Android.apk) |
+
+For Windows, download the ZIP from itch.io, extract it, and run the game executable. On Android, download and open the APK to install it; Android may ask you to allow installs from your browser or file manager. The current gameplay controls are keyboard and mouse, so touchscreen gameplay has not been confirmed.
 
 ## 🎮 Gameplay Video
 
 [▶ Watch the gameplay recording](media/gameplay-demo.mp4)
 
 ## ⚔️ About The Game
-**Nanobot's Enigma** is a 3D Action RPG developed in Unity. 
+**MYTHICAL DUNGEON** is a 3D action RPG developed in Unity.
 
-Players explore a stylized, "techno-dungeon" open world, battling mechanical enemies and uncovering secrets. The game combines hack-and-slash combat with exploration elements, featuring high-fidelity lighting and custom assets created in Blender.
+Explore two dungeons, battle mechanical enemies, and collect coins and health packs. Dodge incoming attacks, face close-range enemies and ranged turrets, and pause the game whenever you need a break.
 
-Currently, the game features **2 fully playable levels** with distinct environmental storytelling.
+The project includes two playable levels, a stylized techno-dungeon setting, custom Blender assets, atmospheric lighting, and an animated 3D main menu.
 
 ## ✨ Key Features
 * **Action-RPG Combat:** Engage in strategic battles against various enemy types.
@@ -59,13 +68,14 @@ Currently, the game features **2 fully playable levels** with distinct environme
 * **Modeling:** Blender (for custom assets)
 
 ## 🚀 Installation
-1.  **Clone the repository:**
+To open the Unity project:
+
+1. **Clone the repository:**
     ```bash
-    git clone [https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git](https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git)
+    git clone https://github.com/Ishant6565/MYTHICAL-DUNGEONS.git
     ```
-2.  Open **Unity Hub**.
-3.  Add the project folder.
-4.  Open the scene `MainMenu` located in `Assets/Scenes` to start the game properly.
+2. Open **Unity Hub** and add the cloned project folder.
+3. Open the project with Unity **6000.0.28f1**.
 
 ---
 *Created by Ishant Gupta*
