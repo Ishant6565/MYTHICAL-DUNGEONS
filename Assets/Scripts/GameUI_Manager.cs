@@ -13,6 +13,9 @@ public class GameUI_Manager : MonoBehaviour
     public GameObject UI_GameOver;
     public GameObject UI_GameFinished;
 
+    private Health playerHealth;
+    private int lastCoin = int.MinValue;
+
     public enum GameUI_State{
         GamePlay,Pause,GameOver,GameFinished,GameLevelUp
     }
@@ -20,13 +23,24 @@ public class GameUI_Manager : MonoBehaviour
     public GameUI_State currentState;
 
     private void Start() {
+        playerHealth = GM.playerCharacter.GetComponent<Health>();
         SwitchUIState(GameUI_State.GamePlay);
     }
 
     void Update()
     {
-        HealthSlider.value = GM.playerCharacter.GetComponent<Health>().CurrentHealthPrecentage;
-        CoinText.text = GM.playerCharacter.Coin.ToString();
+        float healthPercentage = playerHealth.CurrentHealthPrecentage;
+        if (!Mathf.Approximately(HealthSlider.value, healthPercentage))
+        {
+            HealthSlider.value = healthPercentage;
+        }
+
+        int coin = GM.playerCharacter.Coin;
+        if (coin != lastCoin)
+        {
+            lastCoin = coin;
+            CoinText.text = coin.ToString();
+        }
     }
 
     private IEnumerator DelayedPause(float seconds)

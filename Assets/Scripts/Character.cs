@@ -28,6 +28,11 @@ public class Character : MonoBehaviour
     public bool IsPlayer = true;
     private UnityEngine.AI.NavMeshAgent _navMeshAgent;
     private Transform TargetPlayer;
+    private Vector3 _lastDestination;
+    private float _nextDestinationUpdateTime;
+    private bool _hasDestination;
+    private const float DestinationRefreshInterval = 0.1f;
+    private const float DestinationRefreshDistance = 0.25f;
 
     //State machine
     public enum CharacterState{//everytime a new state is added, we need to update fixedUpdate() and SwitchStateTo()
@@ -142,10 +147,25 @@ public class Character : MonoBehaviour
 
     private void CalculateEnemyMovement(){
         if(Vector3.Distance(TargetPlayer.position, transform.position) >= _navMeshAgent.stoppingDistance){
-           _navMeshAgent.SetDestination(TargetPlayer.position);
+           if (_navMeshAgent.isStopped)
+           {
+               _navMeshAgent.isStopped = false;
+               _hasDestination = false;
+           }
+
+           Vector3 targetPosition = TargetPlayer.position;
+           if (Time.time >= _nextDestinationUpdateTime &&
+               (!_hasDestination || (targetPosition - _lastDestination).sqrMagnitude >= DestinationRefreshDistance * DestinationRefreshDistance))
+           {
+               _navMeshAgent.SetDestination(targetPosition);
+               _lastDestination = targetPosition;
+               _hasDestination = true;
+               _nextDestinationUpdateTime = Time.time + DestinationRefreshInterval;
+           }
+
            _animator.SetFloat("Speed",1.0f);
         }else{
-            _navMeshAgent.SetDestination(transform.position);
+           _navMeshAgent.isStopped = true;
            _animator.SetFloat("Speed",0f);
            SwitchStateTo(CharacterState.Attacking);
         }

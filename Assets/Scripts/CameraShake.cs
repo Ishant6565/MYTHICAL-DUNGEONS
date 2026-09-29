@@ -30,12 +30,12 @@ public class CameraShake : MonoBehaviour
         if(Timer>0){
             Timer -=Time.deltaTime;
             Unity.Cinemachine.CinemachineBasicMultiChannelPerlin _cbmcp = camera.GetCinemachineComponent<Unity.Cinemachine.CinemachineBasicMultiChannelPerlin>();
-            _cbmcp.m_AmplitudeGain = Mathf.Lerp(Startintensity, 0f,1 - (Timer / shaketimerTotal));
+            _cbmcp.AmplitudeGain = Mathf.Lerp(Startintensity, 0f,1 - (Timer / shaketimerTotal));
         }
     }
     public void ShakeCamera(){
         Unity.Cinemachine.CinemachineBasicMultiChannelPerlin _cbmcp = camera.GetCinemachineComponent<Unity.Cinemachine.CinemachineBasicMultiChannelPerlin>();
-        _cbmcp.m_AmplitudeGain = ShakeIntensity;
+        _cbmcp.AmplitudeGain = ShakeIntensity;
 
         Startintensity = ShakeIntensity;
         shaketimerTotal = ShakeTime;
@@ -43,7 +43,7 @@ public class CameraShake : MonoBehaviour
     }
     void StopShake(){
         Unity.Cinemachine.CinemachineBasicMultiChannelPerlin _cbmcp = camera.GetCinemachineComponent<Unity.Cinemachine.CinemachineBasicMultiChannelPerlin>();
-        _cbmcp.m_AmplitudeGain = 0f;
+        _cbmcp.AmplitudeGain = 0f;
 
         Timer = 0;
     }
