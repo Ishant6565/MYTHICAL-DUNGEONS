@@ -4,6 +4,10 @@
 ![Language](https://img.shields.io/badge/Language-C%23-blue)
 ![Art](https://img.shields.io/badge/Assets-Blender-orange)
 
+## 🎮 Gameplay Video
+
+[▶ Watch the gameplay recording](media/gameplay-demo.mp4)
+
 ## ⚔️ About The Game
 **Nanobot's Enigma** is a 3D Action RPG developed in Unity. 
 
@@ -65,4 +69,3 @@ Currently, the game features **2 fully playable levels** with distinct environme
 
 ---
 *Created by Ishant Gupta*
-
