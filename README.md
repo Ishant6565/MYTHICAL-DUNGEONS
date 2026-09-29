@@ -4,14 +4,14 @@
 ![Language](https://img.shields.io/badge/Language-C%23-blue)
 ![Art](https://img.shields.io/badge/Assets-Blender-orange)
 
-## Download and play
+## Play and download
 
 | Platform | Download |
 | --- | --- |
-| Windows PC | [Download MYTHICAL DUNGEON on itch.io](https://ishantcypher.itch.io/mythical-dungeon) |
-| Android | [Download the latest Android APK](https://github.com/Ishant6565/MYTHICAL-DUNGEONS/releases/latest/download/Mythical-Dungeon-Android.apk) |
+| Browser (laptop or mobile) | [Play MYTHICAL DUNGEON on itch.io](https://ishantcypher.itch.io/mythical-dungeon) |
+| Windows PC | [Download the Windows build on itch.io](https://ishantcypher.itch.io/mythical-dungeon) |
 
-For Windows, download the ZIP from itch.io, extract it, and run the game executable. On Android, download and open the APK to install it; Android may ask you to allow installs from your browser or file manager. The current gameplay controls are keyboard and mouse, so touchscreen gameplay has not been confirmed.
+Play directly in the browser without installing the game. On a phone, rotate to landscape and use the on-screen joystick, Attack, Dodge, and Pause buttons. On a laptop, use **W, A, S, D** to move, **Left Click** to attack, **Space** to dodge, and **Esc** to pause. To play on Windows without a browser, download and extract the ZIP from itch.io, then run the game executable.
 
 ## 🎮 Gameplay Video
 
