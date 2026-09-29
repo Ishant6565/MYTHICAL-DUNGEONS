@@ -64,5 +64,5 @@ Currently, the game features **2 fully playable levels** with distinct environme
 4.  Open the scene `MainMenu` located in `Assets/Scenes` to start the game properly.
 
 ---
-*Created by Priyank SOlanki*
+*Created by Ishant Gupta*
 
